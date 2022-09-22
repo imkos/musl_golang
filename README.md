@@ -26,9 +26,15 @@ musl 有跨平台的交叉编译完整工具链
 
 alpine linux 小巧, 纯静态实现libc. 基于musl libc的linux.
 
+golang build base alpine linux:
+
+```
+go build -tags netgo .
+```
 
 
-名词附录:
+
+### 名词附录
 
 Alpine Linux:  Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
 
