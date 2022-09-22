@@ -34,6 +34,22 @@ go build -tags netgo .
 
 
 
+### 使用
+
+- 镜像build
+
+```
+docker build -t musl-golang:1.19 .
+```
+
+- 镜像使用
+
+```
+docker run --rm --network=host --privileged=true -e BUILD_DIR=sqlite3_rpc_s -e BUILD_PM=2 -v /mnt/work/goWork/src:/build  musl-golang:1.19
+```
+
+
+
 ### 名词附录
 
 Alpine Linux:  Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
