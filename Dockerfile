@@ -4,6 +4,8 @@ RUN apk add --no-cache gcc g++ git make
 
 WORKDIR /build
 
+RUN git config --global --add safe.directory /build
+
 RUN echo 'export PATH=$PATH:/usr/local/go/bin' >> /opt/go.env
 RUN echo 'export GOPATH=/opt/gopath' >> /opt/go.env
 RUN echo 'export GOPROXY=https://goproxy.cn' >> /opt/go.env
